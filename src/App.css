@@ -3,27 +3,135 @@ body {
   background-color: #f9f9f9;
   margin: 0;
   color: #222;
+  -webkit-font-smoothing: antialiased;
 }
-header, section, footer {
-  max-width: 800px;
-  margin: auto;
+
+header,
+section,
+footer {
+  max-width: 1000px;
+  margin: 20px auto;
   padding: 20px;
-  text-align: center;
 }
-h1, h2 {
+
+/* Header layout */
+.header {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  background: linear-gradient(90deg, rgba(10,102,194,0.06), rgba(79,182,255,0.02));
+  padding: 28px;
+  border-radius: 12px;
+}
+
+.header__avatar {
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 4px solid rgba(10,102,194,0.12);
+  box-shadow: 0 6px 18px rgba(10,102,194,0.08);
+}
+
+.header__content {
+  text-align: left;
+}
+
+h1,
+h2 {
   color: #0a66c2;
+  margin: 6px 0;
 }
+
+.header__link {
+  color: #0a66c2;
+  display: inline-block;
+  margin-top: 8px;
+}
+
+/* About section */
+.about__inner {
+  display: flex;
+  align-items: flex-start;
+  gap: 18px;
+  text-align: left;
+}
+
+.about__image {
+  width: 160px;
+  height: 120px;
+  border-radius: 8px;
+  object-fit: cover;
+  flex-shrink: 0;
+}
+
+.about p {
+  line-height: 1.6;
+}
+
+/* Projects grid */
+.projects__grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 18px;
+  margin-top: 12px;
+}
+
+.project-card {
+  background: #fff;
+  border-radius: 10px;
+  padding: 12px;
+  box-shadow: 0 6px 18px rgba(16,24,40,0.04);
+  text-align: left;
+  transition: transform 0.18s ease, box-shadow 0.18s ease;
+}
+
+.project-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 12px 30px rgba(16,24,40,0.08);
+}
+
+.project-card img {
+  width: 100%;
+  height: 120px;
+  object-fit: cover;
+  border-radius: 8px;
+  margin-bottom: 8px;
+}
+
 ul {
   list-style-type: none;
   padding: 0;
 }
+
 a {
   color: #0a66c2;
   text-decoration: none;
 }
+
 footer {
   margin-top: 40px;
   padding: 20px;
   background-color: #e8f0fe;
   border-top: 1px solid #ccc;
+  border-radius: 8px;
+}
+
+/* Responsive tweaks */
+@media (max-width: 700px) {
+  .header {
+    flex-direction: column;
+    text-align: center;
+  }
+  .header__content {
+    text-align: center;
+  }
+  .about__inner {
+    flex-direction: column;
+    align-items: center;
+  }
+  .about__image {
+    width: 90%;
+    height: auto;
+  }
 }
