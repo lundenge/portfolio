@@ -12,11 +12,15 @@ export default function Experience() {
       </ul>
       <h3>Previous Roles</h3>
       <ul>
-        <li>Chef/Service Genre – GREN (2000–2002)</li>
-        <li>Coordinator – UDR (2003–2005)</li>
-        <li>Auditor – ANAFRI (2004–2005)</li>
-        <li>Mediator – Panel de Médiation (2006–2011)</li>
         <li>Administrator – ACTPA (2011–2016)</li>
+        <li>Mediator – Panel de Médiation (2006–2011)</li>
+        <li>Auditor – ANAFRI (2004–2005)</li>
+        <li>Coordinator – UDR (2003–2005)</li>
+        <li>Chef/Service Genre – GREN (2000–2002)</li>
+        
+        
+       
+        
       </ul>
     </section>
   );
